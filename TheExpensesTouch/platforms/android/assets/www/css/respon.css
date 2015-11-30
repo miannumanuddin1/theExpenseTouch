@@ -1,0 +1,421 @@
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 1039px) {
+
+.page_wrapper {
+	width: 100%;
+	height:auto;
+	padding:0px 0px 0px 0px;
+	margin: 0 auto;
+	position: relative;
+}
+.main_wrapper {
+	width:100%;
+	margin:0 auto;
+}
+.body_wrapper {
+	width:100%;
+	margin:0px auto;
+	position: relative;
+}
+.main {
+	width:100%;
+	margin:0 auto;
+}
+
+
+
+
+.mid_area-all{
+	width: 100%;
+    height: auto;
+    /*padding: 19px 0 0px 1em;*/
+    color: #372e24;
+    margin: 0em 0 0 0px;
+	
+
+}
+
+
+.top-grid {
+	    width:100%;
+		margin:10px auto;
+		background:#cdcfcc;	
+}
+
+.section-left {
+	    width:28%;
+		height:auto;
+			
+}
+
+.section-right {
+	    width:65%;
+		height:auto;
+			
+}
+
+img
+{
+   width:100%; 
+}
+
+.logo
+{
+   width:85px; margin-left:0px; margin-top:10px;
+}
+
+
+.logo2
+{
+	margin:10px 0px 0px 0px;
+	width:300px;
+}
+
+
+.form_wrap {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:46%;
+	padding:0px 0 24px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#FFFFFF;
+}
+
+.form_wrap2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:85%;
+	padding:0px 0 10px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#e9eaed;
+}
+
+.form1 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:88%;
+	padding:10px;
+	margin:10px 0 10px 10px;
+	position: relative;
+}
+
+.form2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:591px;
+	padding:0px 0 0 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.form3 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:47%;
+	padding:10px;
+	margin:0px 0px 5px 0px;
+	position: relative;
+}
+
+.grid-2 {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 5px 0 0 0px;
+	float:left;
+}
+
+.buttons { width:94%; float:left; margin:11px 10px 0 10px; color:#2e261c; border-top:1px solid #000;}
+
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+	
+.page_wrapper {
+	width: 100%;
+	height:auto;
+	padding:0px 0px 0px 0px;
+	margin: 0 auto;
+	position: relative;
+}
+.main_wrapper {
+	width:100%;
+	margin:0 auto;
+}
+.body_wrapper {
+    width:100%;
+    margin:0px auto;
+    position: relative;
+}
+
+
+.main {
+	width:100%;
+	height:auto;
+	margin:0px auto;
+}
+
+
+.mid_area-all{
+	width:100%;
+	height:auto;
+	/*padding:19px 0 0px 1em;*/
+	color:#372e24;
+	margin: 0em 0 0 0px;
+	
+
+}
+
+.top-grid {
+	    width:100%;
+		margin:10px auto;
+		background:#cdcfcc;	
+}
+
+.section-left {
+	    width:28%;
+		height:auto;
+			
+}
+
+.section-right {
+	    width:65%;
+		height:auto;
+			
+}
+
+
+img
+{
+   width:100%; 
+}
+
+.logo
+{
+   width:85px; margin-left:0px; margin-top:10px;
+}
+
+
+.logo2
+{
+	margin:10px 0px 0px 0px;
+	width:300px;
+}
+
+
+.form_wrap {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:100%;
+	padding:0px 0 24px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#FFFFFF;
+}
+
+.form_wrap2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:100%;
+	padding:0px 0 10px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#e9eaed;
+}
+
+.form1 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:88%;
+	padding:10px;
+	margin:10px 0 10px 10px;
+	position: relative;
+}
+
+.form2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:591px;
+	padding:0px 0 0 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.form3 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:47%;
+	padding:10px;
+	margin:0px 0px 5px 0px;
+	position: relative;
+}
+
+.grid-2 {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 5px 0 0 0px;
+	float:left;
+}
+
+.buttons { float:left;  margin:11px 10px 0 10px; color:#2e261c; border-top:1px solid #000;}
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 320px) {
+	
+.page_wrapper {
+	width: 100%;
+	height:auto;
+	padding:0px 0px 0px 0px;
+	margin: 0 auto;
+}
+.main_wrapper {
+	width:100%;
+	margin:0 auto;
+}
+.body_wrapper {
+    width:100%;
+    margin:0px auto;
+    background:#000000;
+    padding: 10px 0 10px 0;
+    position: relative;
+}
+.main {
+	width:100%;
+	height:auto;
+	margin:0px auto;
+}
+
+
+.mid_area-all{
+	width:100%;
+	height:auto;
+	padding:20px 0 0px 0px;
+	color:#372e24;
+	margin: 0 0 0 0px;
+	
+
+}
+
+img
+{
+   width:70%; 
+}
+
+
+.top-grid {
+	    width:100%;
+        margin:10px auto;
+		background:#cdcfcc;	
+}
+
+.section-left {
+	    width:28%;
+		height:auto;
+			
+}
+
+.section-right {
+	    width:65%;
+		height:auto;
+			
+}
+
+
+
+.logo
+{
+   width:85px; margin-left:0px; margin-top:10px;
+}
+
+
+.logo2
+{
+	margin:10px 0px 0px 0px;
+	width:300px;
+}
+
+
+.form_wrap {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:100%;
+	padding:0px 0 24px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#FFFFFF;
+}
+
+.form_wrap2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:100%;
+	padding:0px 0 10px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#e9eaed;
+}
+
+.form1 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:88%;
+	padding:10px;
+	margin:10px 0 10px 10px;
+	position: relative;
+}
+
+.form2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:591px;
+	padding:0px 0 0 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.form3 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:47%;
+	padding:10px;
+	margin:0px 0px 5px 0px;
+	position: relative;
+}
+
+.grid-2 {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 5px 0 0 0px;
+	float:left;
+}
+
+.buttons { float:left; margin:11px 10px 0 10px; color:#2e261c; border-top:1px solid #000;}
+
+
+
+}

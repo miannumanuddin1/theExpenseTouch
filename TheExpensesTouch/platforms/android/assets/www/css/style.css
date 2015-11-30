@@ -1,0 +1,556 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0 auto;
+	width:100%;
+	text-align:center;
+	background:#CCCCCC;
+	overflow-x:hidden;
+
+}
+
+
+
+h1 {
+	color:#FFFFFF;
+	font-size:14px;
+	text-transform:uppercase;
+	margin-bottom:10px;
+    text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+strong a {
+	color: #7a7a7a;
+	text-decoration:underline;
+}
+
+span {
+}
+
+
+ul {
+	list-style:none;
+	display:inline;
+}
+
+/***********************************************************************************************************************
+ GLOBAL STRUCTURE
+************************************************************************************************************************/
+
+.page_wrapper {
+	width: 100%;
+	height:auto;
+	padding:0px 0px 0px 0px;
+	margin: 0 auto;
+	text-align:left;
+	position: relative;
+}
+.main_wrapper {
+	float:left;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+.body_wrapper {
+	float:left;
+	width:100%;
+    height:auto;
+	margin:0px auto;
+	position: relative;
+}
+.main {
+	width:950px;
+	height:auto;
+	margin:0 auto;
+}
+
+
+/***********************************************************************************************************************
+ TOP AREA AND LOGO
+************************************************************************************************************************/
+
+.top-grid {
+	    width:100%;
+		margin:10px auto;
+		background:#cdcfcc;
+}
+
+.section-left {
+	    width:28%;
+		float:left;
+}
+
+.section-right {
+	    width:65%;
+		float:right;
+}
+
+
+.logo
+{
+	width:85px;
+	margin-left:0px;
+	margin-top:10px;
+}
+
+
+.logo2
+{
+	margin:10px 0px 0px 0px;
+	width:300px;
+}
+/***********************************************************************************************************************
+ HEADER AREA
+************************************************************************************************************************/
+
+.main {
+	text-align:left;
+	width:984px;
+	height:auto;
+	margin:0px auto;
+}
+
+
+.buttons { float:left;  margin:11px 10px 0 10px; color:#2e261c; border-top:1px solid #000;}
+
+
+.read_more { float:left; width:100px; height:35px; margin:10px 5px 0 0px; color:#2e261c;}
+.read_more a {float:left; width:90px; color:#000; height:27px; border:0px solid #9c8d7c;
+    padding:8px 0 0 0; font-size:14px; background:#e9eaed; text-transform:capitalize; text-decoration:none;  text-align:center;}
+.read_more a:hover {  color:#fff; background:#e9eaed; border:none;}
+
+
+.read_more2 { float:right; width:20px; height:20px; margin:2px 29px 0 0px; color:#2e261c; font-size:36px;  text-transform:capitalize; text-decoration:none;  text-align:center;}
+.read_more2 a {float:left; width:20px; color:#fff; height:20px; border:0px solid #9c8d7c;
+    padding:0px 0 0 0; font-size:36px;  text-transform:capitalize; text-decoration:none;  text-align:center;}
+.read_more2 a:hover {  color:#000; cursor:pointer; font-size:36px; border:none; text-decoration:none;}
+
+
+/**** RIGHT SIDE START************/
+
+
+.mid_area-all{
+	float:left;
+	width:100%;
+	height:auto;
+	/*padding:20px 0 0px 0px;*/
+	color:#372e24;
+	margin: 0em 0 0 0px;
+
+
+}
+.mid_area-all h1 {
+	font-style:normal;
+	font-weight:normal;
+	font-size:24px;
+	color:#fff;
+	text-transform:uppercase;
+	padding:0px 0 6px 0;
+	padding-left:0px;
+	letter-spacing:1px;
+	float: left;
+}
+.mid_area h1 {
+	font-style:normal;
+	font-weight:normal;
+	font-size:24px;
+	color:#fff;
+	text-transform:uppercase;
+	padding:0px 0 15px 0;
+	padding-left:0px;
+	float: left;
+}
+
+.mid_area h1 span {
+	color:#cd0000;
+}
+.mid_area p {
+	font-style:normal;
+	font-weight:normal;
+	font-size:12px;
+	color:#fff;
+	text-transform:capitalize;
+	padding:0 20px 0 0px;
+	width: 80px;
+	float: left;
+}
+
+.mid_area-all p {
+	font-size:12px;
+	color:#fff;
+	text-transform:capitalize;
+	padding:0 0 15px 0px;
+	width: 650px;
+	float: left;
+	line-height: 19px;
+}
+.mid_area-all p a{
+	color:#fff;
+	text-decoration: underline;
+}
+.mid_area-all p a:hover{
+	color:#cd0000;
+	text-decoration: underline;
+}
+.mid_area strong {font-style:normal;font-weight:bold;font-size:12px;}
+
+.mid_area strong a{
+	float:left;
+	color:#cd0000;
+	text-decoration:underline;
+	padding:0 0 5px 0
+}
+.mid_area strong a:hover{color:#fff;}
+
+.form_wrap {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:46%;
+	padding:0px 0 24px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#FFFFFF;
+}
+
+.form_wrap2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:85%;
+	padding:0px 0 10px 0px;
+	margin:0px 0px 0px 0px;
+	position: relative;
+	background:#e9eaed;
+}
+
+.form1 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:88%;
+	padding:10px;
+	margin:10px 0 10px 10px;
+	position: relative;
+}
+
+.form2 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:591px;
+	padding:0px 0 0 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.form3 {
+	float:left;
+	height:auto;
+	color:#FFFFFF;
+	width:47%;
+	padding:10px;
+	margin:0px 0px 5px 0px;
+	position: relative;
+}
+
+.grid-1 {
+	width:100% !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 0;
+	float:left;
+    color:#000;
+}
+
+.grid-1 p {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 0;
+	float:left;
+	color: #000;
+	font-size: 12px;
+	padding: 0px;
+}
+    .grid-1 label {
+    font-weight:normal
+    }
+
+.grid-1 .bold {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 0;
+	float:left;
+	color: #000;
+	font-size: 14px;
+	padding: 0px;
+	font-weight:bold;
+}
+
+
+.grid-1 em {
+	margin: 0px 0 0;
+	float:left;
+	color:#cd0000;
+	font-style:normal;
+}
+.grid-1 .inputbox {
+	width: 190px !important;
+	position:relative;
+	height: 30px;
+	margin: 0px 0 0;
+	float:left;
+	background-color:#fff;
+	color:#000;
+	border:1px solid #031736;
+}
+
+.grid-2 {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 0 10px;
+	float:left;
+}
+
+.grid-3 {
+	width: 200px !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 10px 0px;
+	float:left;
+}
+
+.grid-3 .checkbox{
+	float:left;
+	height: auto;
+	margin: 4px 0 0 0px;
+	width:15px;
+	height:14px;
+	float:left;
+}
+
+.grid-3 p{
+	height: auto;
+	margin: 0px 0 0 10px;
+	font-size:12px;
+	padding: 0;
+	width: auto;
+	float: left;
+}
+.grid-2 p {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 0;
+	float:left;
+	color: #000;
+	font-size: 12px;
+	padding: 0px;
+}
+
+.grid-2 .bold {
+	width: 190px !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 0;
+	float:left;
+	color: #000;
+	font-size: 17px;
+	padding: 0px;
+	font-weight:bold;
+}
+
+
+.grid-2 em {
+	margin: 0px 0 0;
+	float:left;
+	color:#cd0000;
+	font-style:normal;
+	text-transform: capitalize;
+}
+.grid-2 .inputbox {
+	width: 190px !important;
+	position:relative;
+	height: 30px;
+	margin: 0px 0 0;
+	float:left;
+	background-color:#fff;
+	color:#000;
+	border:1px solid #031736;
+}
+
+.grid-4 {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 12px 10px 20px;
+	float:left;
+}
+.grid-4 p {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 10px;
+	float:left;
+	color: #fff;
+	font-size: 12px;
+	padding: 0;
+}
+
+.grid-5 {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 10px 43px;
+	float:left;
+}
+
+.grid-main{
+	width: 510px !important;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+	float:left;
+}
+
+.grid-6 {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 20px 0px 0px;
+	float:left;
+}
+
+.grid-6 p {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 5px;
+	float:left;
+	color: #fff;
+	font-size: 12px;
+	padding: 0;
+}
+.grid-6 p span {
+	color: #ce0100;
+}
+
+.grid-6 .radiobutton{
+	float:left;
+	height: auto;
+	margin: 0px 0 0 0px;
+	float:left;
+}
+
+.grid-7 {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0px 0px 22px;
+	float:left;
+}
+
+.grid-7 p {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 10px;
+	float:left;
+	color: #fff;
+	font-size: 12px;
+	padding: 0px;
+}
+.grid-7 .radiobutton{
+	float:left;
+	height: auto;
+	margin: 0px 0 0 0px;
+	float:left;
+}
+.grid-5 p {
+	width: auto !important;
+	position:relative;
+	height: auto;
+	margin: 0px 0 5px 10px;
+	float:left;
+	color: #fff;
+	font-size: 12px;
+	padding: 0;
+}
+
+.grid-4 .radiobutton{
+	float:left;
+	height: auto;
+	margin: 0px 0 0 0px;
+	float:left;
+}
+.grid-5 .radiobutton{
+	float:left;
+	height: auto;
+	margin: 0px 0 0 0px;
+	float:left;
+}
+.rows {
+	height:auto;
+	margin:0px 28px 0px 0;
+	width: auto;
+	float:left;
+}
+.text-form {
+	width:auto;
+	width:190px;
+	font-size:12px;
+	color:#fff;
+	padding:4px 0px 5px 12px;
+}
+#ImagePopUp
+{
+    margin:0px;
+    padding:0px;
+    width:100%;
+    background:#333;
+    position:fixed;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    z-index:1000;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    display:none;
+}
+
+#ImagePopUp #Close
+{
+    margin:0px;
+    padding:8px 15px 8px 15px;
+    position:absolute;
+    right:10px;
+    border:none;
+    border-radius:5px;
+    overflow:hidden;
+    background:#FFF;
+    font-size:14px;
+    top:10px;
+		z-index: 99999999999999;
+}
+
+
+#ImagePopUp h1
+{
+    margin:60px 10px 10px 10px;
+    font-weight:500;
+    display:block;
+    color:#FFF;
+    text-align:left;
+    font-size:18px;
+}
+
+#ImagePopUp img
+{
+   margin: 5em 0px 0px 0px;
+/*width: 100%;
+height: 50%;*/
+width: 95%;
+/*height: 100%;*/
+}

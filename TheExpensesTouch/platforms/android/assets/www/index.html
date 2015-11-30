@@ -1,0 +1,1490 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+           <link href="css/kendo.mobile.all.min.css" rel="stylesheet" />
+           <link href="css/kendo.highcontrast.mobile.min.css" rel="stylesheet" />
+           <link href="css/kendo.dataviz.highcontrast.min.css" rel="stylesheet" />
+            <link href="css/custome.css" rel="stylesheet" />
+            <link href="css/ExpenseTouchStyle.css" rel="stylesheet" />
+            <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+            <link href="css/respon.css" rel="stylesheet" type="text/css" />
+        <link href="js/datepicker/mobipick.css" rel="stylesheet" />
+            <script src="Scripts/jquery-2.1.3.js"  type="text/javascript"></script>
+         <script type="text/javascript" src="cordova.js"></script>
+  <script src="cordova_plugins.js" type="text/javascript"></script>
+            <!--<script src="js/jquery-1.8.3.js" type="text/javascript"></script>-->
+            <script src="js/kendo.all.min.js" type="text/javascript"></script>
+             <!--<script src="Models/Main.js" type="text/javascript"></script>-->
+            <script src="Models/AppExpense.js"  type="text/javascript"></script>
+            <script src="Controller/Index.js" type="text/javascript"></script>
+           <!-- <script type="text/javascript" src="js/jquery-1.6.js" ></script>-->
+            <script type="text/javascript" src="js/date.format.js" ></script>
+            <script src="js/JIC.js" type="text/javascript"></script>
+        <script src="js/datepicker/xdate.js"></script>
+        <script src="js/datepicker/xdate.i18n.js"></script>
+        <script src="js/datepicker/mobipick.js"></script>
+        <script src="js/Chart.js" type="text/javascript"></script>
+        <style type="text/css">
+              .disable {
+       pointer-events: none !important;
+       cursor: default !important;
+    }
+        </style>
+            <!--<script src="js/UploadMedia.js"></script>    -->
+    </head>
+    <body>
+       <!--Header-->
+<div data-role="layout" data-id="Login-layout">
+    <header data-role="header" style="background: #e5e3e4;">
+     <div class="Error">Invalid Email ID</div>
+    </header>
+</div>
+<!--Header-->
+<!--Main Menu Header-->
+<div data-role="layout" data-id="Home-layout">
+
+        <!--<div data-role="navbar" id="MainPageTitle">
+            <a data-align="left" class="MenuBtn" href="#Home-layout"></a>
+            <span data-role="view-title"></span>
+             <a data-align="right" data-role="button" class="nav-button" href="#/">Index</a>
+        </div>-->
+
+      <div data-role="footer">
+          <div data-role="tabstrip">
+             <!-- <a data-icon="icon6" href="#Countrieslandingpage">Country</a> -->
+              <a data-icon="icon1" href="#homelandingpage">Home</a>
+              <a data-icon="icon2" href="#PrepareMyTravels-layout">Add</a>
+              <a data-icon="icon3" href="#viewmytravel-layout">Travels</a>
+              <a data-icon="icon4"  href="#mySubmission-layout">Submissions</a>
+           <!--   <a data-icon="icon5" id="btn-logout">Logout</a>-->
+               <a data-icon="icon5" href="#Countrieslandingpage">Country</a>
+          </div>
+       </div>
+
+	   <div data-role="header"><div class="app_footer"><img src="images/footer_logo.png"></div><!--/Home Page Footer after logged in --></div>
+
+</div>
+<!--Main Menu Header-->
+<!--Login-->
+    <div data-role="view" id="Login-home" data-title="Login" data-layout="Login-layout" data-transition="overlay:slide" data-persist="true">
+
+<div class="page_wrapper">
+<!-- top area start -->
+<div class="main_wrapper">
+<div class="inner-banners"><img src="images/home_banner.png"/></div>
+<div class="main">
+<div class="top-grid">
+
+<!--<div class="logo2"><img src="images/mainlogo.png" width="300" height="40" /></div>-->
+</div>
+</div>
+</div>
+</div>
+
+
+        <div class="LoginFrieldsContainer" style="margin-top:40%">
+
+            <input type="text" placeholder="Email Address" id="EmailAddress">
+            <input type="password" placeholder="Password" id="Password">
+
+            <div align="center" style="margin-top:4%" >
+            <button id="btnlogin" class="custom_btn_">LogIn</button>
+<!--             <a id="btnlogin" data-click="btnLoginClickEvent"  data-role="button" >Login</a>-->
+            </div>
+
+
+            <div id="Loader" style="display:none;">
+                <img src="images/loader.GIF">
+            </div>
+         </div>
+
+	</div>
+<!--Login-->
+<!--After Login-->
+    <div data-role="view" id="Home-layout" data-title="MAIN MENU" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+   <ul data-role="listview" class="MainMenu">
+        <li>
+        <a id="MyReports" href="#PrepareMyTravels-layout">
+      <!-- <img src="images/MyReports.png">-->
+            <img src="images/mytravel.png"/>
+            <p>Prepare My Travels</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li id="MyForms">
+        <a href="#viewmytravel-layout">
+            <img src="images/FormsIco.png">
+            <p>View My Travel</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="Accounts" href="#uploadmyexpense-layout">
+           <!-- <img src="images/AccountIco.png">-->
+            <img src="images/expenseupload.png"/>
+            <p>Upload My Expense</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="Log" href="#viewmyexpense-layout">
+            <img src="images/LogIco.png">
+            <p>View My Expense</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="MediaLibrary" href="#mySubmission-layout" data-click="LogoutFunction">
+            <img src="images/MediaIco.png">
+            <p>My Submission</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+
+        <li>
+        <a id="Logout" href="#Login-home">
+            <img src="images/LogoutIco.png">
+            <p>LogOut</p>
+            <div style="clear: both"></div>
+        </a>
+        </li>
+     </ul>
+        <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="add" href="#PrepareMyTravels-layout">add</a>
+            <a data-icon="compose" href="#viewmytravel-layout">compose</a>
+            <a data-icon="action"  href="#mySubmission-layout">action</a>
+            <a data-icon="settings">Settings</a>
+        </div>
+    </footer>
+  </div>
+        <!--After Login-->
+
+        <!--Countries Loading Page-->
+        <div data-role="view" id="Countrieslandingpage" data-title="countries" data-layout="Home-layout" data-show="countryshow" data-transition="overlay:slide" data-persist="true">
+
+            <div class="page_wrapper">
+                <!-- top area start -->
+
+                <div class="main_wrapper">
+                    <div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+                    <div class="main">
+                      <div class="page_headings">SELECT COUNTRY</div>
+
+                        <div class="top-grid top-grid1">
+
+
+                        </div>
+                        <div style="clear: both;"><center><a style="padding-left:15% !important;padding-right:15% !important"data-role="button" class="logout custom_btn_ ">Log Out</a></center></div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <!--End Countries Loading Page-->
+     <!--Home Landing Page-->
+           <div data-role="view" id="homelandingpage" data-title="HOME PAGE" data-show="piecharthomepage" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+      <style type="text/css">
+          .piecharts {
+          width: 100% !important;
+          margin: 2% 0 0 2% !important;
+          }
+      </style>
+			<div class="homepage_banner"><img src="images/home_banner.png" /></div>
+         <div class="page_wrapper">
+             <!-- top area start -->
+             <div class="main_wrapper">
+                 <div class="main">
+                     <div class="top-grid">
+                         <div class="page_headings">REIMBURSABLE AMOUNT <img id="flag" class="flag_inner_"></div>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+    <div class="page_wrapper">
+        <div class="main" style="overflow: hidden;" >
+
+
+   <div  style="width:40%;float:right;">
+       <span style="background-color: #356BAC;">
+        <input type="checkbox" id="approved"  style="visibility: hidden;background-color: blue;"/>
+           </span>
+           <label  style=" font-size: initial; margin-left: 5px;">Approved</label><br />
+       <span style="background-color: #B73734;">
+            <input  type="checkbox" id="rejected" style="visibility: hidden;background-color: blue;"/>
+           </span>
+           <label style="font-size: initial; margin-left: 5px;">Rejected</label><br />
+       <span style="background-color: #88AC40;">
+       <input  type="checkbox" id="pending"  style="visibility: hidden;background-color: blue;"/>
+           </span>
+            <label style=" font-size: initial; margin-left: 5px;">Pending</label>
+	</div>
+            <div style="width: 100%;margin:0 auto;margin-top:0% !important;"><canvas id="myChart"  class="piecharts"></canvas></div>
+            <div style="clear: both; width:68%; margin: 0 auto; text-align:left;">
+            <label id="lblsubmit">Submitted Travel</label><br />
+            <label id="lblapproved" style="color: #356BAC;">Approved Travel</label><br />
+            <label id="lblreject" style="color: #B73734;">Rejected Travel</label><br />
+            <label id="lblpendng" style="color: #88AC40;">Pending Travel</label>
+          </div>
+
+</div>
+       </div>
+
+
+               </div>
+
+         <!--End Home Landing Page-->
+
+<!--Prepare My Travels Start-->
+    <div data-role="view" id="PrepareMyTravels-layout" data-title="PREPEARMY TRAVEL" data-layout="Home-layout" data-show="addtravelshow" data-transition="overlay:slide" data-persist="true">
+
+
+<!--        <div class="ShareEmail" id="ShareEmail">-->
+
+
+         <div class="page_wrapper">
+             <!-- top area start -->
+
+             <div class="main_wrapper">
+			 <div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+                 <div class="main">
+                     <div class="top-grid">
+                      <div class="page_headings">ADD TRAVEL &nbsp;&nbsp;&nbsp;<img id="addtravelflag"  class="flag_inner_"/></div>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+        <div style="clear:both;"></div>
+<!--            <input type="text" id="TravelName" placeholder="Travel Name" />-->
+<!--            <input type="date" id="datepicker" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass"  placeholder="Date From"  /><br />-->
+<!--            <input type="date" id="datepickerto" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass" placeholder="Date To"   />-->
+<!--            <input type="text" id="Description" placeholder="Description" style="height:1%" />-->
+                <!--  <textarea name="comment" id="Description" placeholder="Description" ></textarea>-->
+      <!--    <form >
+              <ul data-role="listview" data-style="inset">
+                  <li>
+                      <label>Travel Name
+                          <input type="text" id="TravelName" />
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          Date From
+                          <input type="date" id="datepicker" />
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          Date To
+                          <input type="date" id="datepickerto" />
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          Description
+                          <textarea id="Description" placeholder="Description" style="resize: none;float: left;"></textarea>
+                      </label>
+                  </li>
+                  <li>
+                      <label>&nbsp;
+                          <a data-role="button" id="btnsave" style="width: 79%; text-align: center; font-size: 30px; float: left; margin-top: 0.7em; padding:.2em 1em;">Save</a>
+                      </label>
+                  </li>
+              </ul>
+          </form>-->
+
+        <div class="DetailForm customfields_">
+    <table class="Container" border="0" id="tblTravel" style="background-color:none;">
+        <tr>
+
+            <td> <input type="text" id="TravelName" class="textbox" placeholder="Travel Name" /></td>
+        </tr>
+        <tr>
+
+            <td><input type="date" id="datepicker" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass"  placeholder="Date From"  /></td>
+        </tr>
+        <tr>
+
+            <td><input type="date" id="datepickerto" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass" placeholder="Date To"   /></td>
+        </tr>
+        <tr>
+
+            <td><textarea id="Description" class="textarea" placeholder="Description"></textarea></td>
+        </tr>
+        <tr>
+
+            <td> <a data-role="button" id="btnsave" class="custom_btn_"  style="width:79%; margin-top:4%">Save</a></td>
+        </tr>
+    </table>
+</div>
+
+
+
+<!--</div>-->
+
+	</div>
+<!--Prepare My Travels End-->
+
+    <!--  View My Travel-->
+
+    <div data-role="view" id="viewmytravel-layout" data-scroller='{"elastic": false}' data-title="VIEW TRAVELS" data-layout="Home-layout"  data-show="viewTravelAfterShow" data-transition="overlay:slide" >
+
+      <!-- <div style="clear: both;">
+            <button class="Customebutton" id="gotouploadMedia">Upload Media</button>
+        </div>-->
+
+<!--            <div id="MediaLibraryLoader">
+                <img src="images/loader.GIF">
+            </div>-->
+
+       <!-- <img src="" id="dwnldImg" style="display: none;">-->
+
+        <div class="page_wrapper">
+            <div class="page_wrapper">
+                <!-- top area start -->
+                <div class="main_wrapper">
+				<div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+                    <div class="main">
+                        <div class="top-grid">
+
+                           <div class="page_headings">View Travel  &nbsp;&nbsp;&nbsp;<img id="viewtravelflag" class="flag_inner_"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="travelrep">
+
+
+            </div>
+            <script id="travelrepeat" type="application/template-html">
+                	<div class="v_travel_main_ca">
+				<div class="v_trv_ca">
+					<div class="ca_travel-name" >{{travelName}}<span class="ca_travel_date">{{datefrom}} to {{dateto}}</span></div>
+					<p>{{desc}}.</p>
+				<a href="#viewExpensesOfTravelByDate?TID={{tid}}" class="v_btn">View Detail</a>
+				</div>
+			</div>
+            </script>
+		<!--/main-->
+
+	<!--		<div class="v_travel_main_ca">
+				<div class="v_trv_ca">
+					<div class="ca_travel-name">Your Travel <span class="ca_travel_date">15-06-2014 to 20-07-2015</span></div>
+					<p>Reference site about Lorem Ipsum, giving information on its origins,as well as a
+random Lipsum generator.</p>
+				<a href="#viewExpensesOfTravelByDate?TID=274" class="v_btn">View Detail</a>
+				</div>
+			</div><!--/main-->
+
+			<!--<div class="v_travel_main_ca">
+				<div class="v_trv_ca">
+					<div class="ca_travel-name">Your Travel <span class="ca_travel_date">15-06-2014 to 20-07-2015</span></div>
+					<p>Reference site about Lorem Ipsum, giving information on its origins,as well as a
+random Lipsum generator.</p>
+				<a href="#viewExpensesOfTravelByDate?TID=274" class="v_btn">View Detail</a>
+				</div>
+			</div>--><!--/main-->
+
+
+
+      <!--  <table id="t01" border="0" align="center">
+            <thead>
+                <tr>
+                    <th>Travel Name</th>
+                    <th>From Date</th>
+                    <th>To Date</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        <tbody>
+
+        </tbody>
+        </table>
+        -->
+            </div>
+	</div>
+
+ <!-- END  View My Travel-->
+
+        <!--Edit My Travels Start-->
+    <div data-role="view" id="EditMyTravels-layout" data-title="EDIT TRAVEL" data-after-show="EditMyTravelInit" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+         <div class="page_wrapper">
+<!-- top area start -->
+<div class="page_wrapper" style="margin-top:10px;">
+    <!-- top area start -->
+    <div class="main_wrapper">
+        <div class="main">
+            <div class="top-grid">
+
+                <div class="logo2"><img src="images/mainlogo.png" width="300" height="40" /></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="body_wrapper">
+            <h1>Edit Travel &nbsp;&nbsp;&nbsp;<img id="edittravelflag" class="flag_inner_"/></h1>
+            </div>
+<!--        <div class="ShareEmail" id="form">-->
+<!--        -->
+<!--            <center>-->
+<!--                -->
+<!--            <input type="text" id="txtTravelName" placeholder="Travel Name" />-->
+<!--            <input type="date" id="txtdatepicker" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass"  placeholder="Date From"  />-->
+<!--            <input type="date" id="txtdatepickerto" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass" placeholder="Date To"   />-->
+<!--            <input type="text" id="txtDescript" placeholder="Description" style="height:1%" />-->
+          <!--  <textarea name="comment" id="Description" placeholder="Description" ></textarea>-->
+          <form >
+              <ul data-role="listview" data-style="inset">
+                  <li>
+                      <label>Travel Name
+                          <input type="text" id="txt-TravelName" />
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          Date From
+                          <input type="date" id="txt-datepickerrr" />
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          Date To
+                          <input type="date" id="txt-datepickertooo" />
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          Description
+                          <textarea id="txt-Descript" style="resize: none"></textarea>
+                      </label>
+                  </li>
+                  <li>
+                      <label>
+                          <a id="btn-travelupdate" data-click="btnupdateTravelClickEvent"  data-role="button" >Update</a>
+                          <a id="btncancel" href="#viewmytravel-layout" data-role="button" >Cancel</a>
+
+                      </label>
+                  </li>
+
+              </ul>
+          </form>
+         </div>
+
+
+    </div>
+
+              <!--  <input type="button" id="btnupdate" value="UpDate" />-->
+                <!--<button id="btnupdate">Update</button>-->
+                <!-- <a id="mobile-button1" data-click="btnupdateTravelClickEvent" data-role="button" style="display: block; margin: 2em; text-align: center;">Trigger Event 1</a>-->
+<!--            </center>-->
+<!---->
+<!---->
+
+<!--Edit My Travels End-->
+
+ <!--Upload Expense-->
+
+    <div data-role="view" id="uploadmyexpense-layout" data-scroller='{"elastic": false}' data-title="UPLOAD EXPENSE"  data-after-show="uploadExpensePageLoad" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+         <div class="page_wrapper">
+                    <!-- top area start -->
+                    <div class="main_wrapper">
+					<div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+                        <div class="main">
+                            <div class="top-grid">
+                              <div class="page_headings">Upload Expenses  &nbsp;&nbsp;&nbsp;<img id="uploadExpenseflag" class="flag_inner_"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         <div class="body_wrapper">
+    </div>
+       <div class="DetailForm">
+    <form id="formvalidate">
+    <table class="Container" border="0">
+        <tr>
+           <td>
+				<div id="DropdownListCustome"><select style=""id="ddlTravelName" class="textarea"></select></div>
+			</td>
+        </tr>
+        <tr>
+            <td>
+				<select  id="ddlExpenseType" class="textarea">
+					<option value="" selected="selected">Select Expense Type</option>
+				</select>
+			</td>
+        </tr>
+        <tr>
+          <td>
+			<input type="date" id="date" onClick="$(this).removeClass('placeholderclass')" class="date dateclass placeholderclass"  placeholder="Date"  />
+		  </td>
+        </tr>
+        <tr id="discriptionRequired">
+             <td>
+				<textarea id="txtDescription" placeholder="Description" class="textarea"></textarea>
+			</td>
+        </tr>
+        <tr>
+			<td>
+				<input type="number"  id="amount" placeholder="Amount" class="textarea" />
+			</td>
+        </tr>
+
+        <tr>
+
+            <td>
+            <select  id="ddlCurrency" style="" class="textarea">
+               <!--<option selected="selected" value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="EUR">EUR</option>
+                <option value="CHF">CHF</option>
+                <option value="(100)JPY">JPY</option>
+                <option value="CNY (*)">CNY</option>
+                <option value="BHD">BHD</option>
+                <option value="RUB">RUB</option>
+                <option value="DKK">DKK</option>
+                <option value="AUD">AUD</option>
+                <option value="SEK">SEK</option>
+                <option value="CAD">CAD</option>
+                <option value="KRW">KRW</option>
+                <option value="MXN">MXN</option>
+                <option value="SGD">SGD</option>
+                <option value="AED">AED</option>
+                <option value="BRL">BRL</option>
+                <option value="ARS">ARS</option>-->
+            </select></td>
+        </tr>
+
+
+        <tr>
+
+
+              <td>
+					<a id="Uploadpppp" data-click="ChoosePhoto" data-role="button" style="float:left;background:none;border:0px" class="cs_btn">
+						<img src="images/icons/upload-file_btn.png">
+					</a>
+					<a data-role="button" data-click="CapturePhotoUpload" style="float:right;background:none;border:0px" class="cs_btn">
+						<img src="images/icons/upload_picture_btn.png">
+					</a>
+                  <img id="image"  style="display:none;" />
+			</td>
+
+        </tr>
+
+        <tr>
+
+            <td> <a id="A1" data-click="UploadExpense" data-role="button" class="custom_btn_" style="width:65%;">Submit Expense</a></td>
+        </tr>
+        <tr style=" display: none; ">
+
+            <td>
+           <label>
+ <a id="btnSubmittt" data-click="UploadExpense" data-role="button" style="display: block; margin: 2em; text-align: center;">Submit</a>
+ </label>
+            </td>
+            </tr>
+    </table>
+    </form>
+    </div>
+
+
+        <script id="ddloption" type="application/template-html">
+            <option value="{{id}}">{{Name}}</option>
+        </script>
+          <script id="ssExpensetypeoption" type="application/template-html">
+            <option data-commentRequired="{{CommentRequired}}" value="{{id}}">{{Name}}</option>
+        </script>
+    </div>
+
+<!--End UploadExpense-->
+           <!--    View my Expense-->
+
+    <div data-role="view" id="viewmyexpense-layout" data-scroller='{"elastic": false}' data-title="TRAVEL OF EXPENSES" data-init="initExpanse" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+          <ul data-role="listview" class="MainMenu2"  id="ExpenseTravel">
+           </ul>
+
+
+
+
+		<script id="TravelLi" type="application/template-html">
+		 <li><a  href="#viewExpensesOfTravelByDate?TID={{Tid}}"><img src="images/mytravel.png"/><p>{{TravelName}}</p><p><a  data-click="SubmitExpense" data-Tid="{{Tid}}"  data-role="button" >Submit Travel</a></><div style="clear: both"></div></a></li>
+        </script>
+        <!--<script id="travelAccordain" type="application/template-html">
+               <div data-role="collapsible"><h3>{{TravelName}}</h3><p><table></script>
+       -->
+    </div>
+  <!--End View my Expense-->
+                <!--    view  my Expense by date-->
+
+    <div data-role="view" id="viewExpensesOfTravelByDate" data-scroller='{"elastic": false}' data-title="EXPENSES BY DATE" data-init="viewexpensepulltorefresh" data-show="initExpansedate" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+       <!--   <ul data-role="listview" class="MainMenu2"  id="viewexpensebydate">
+           </ul>
+        -->
+        <div class="page_wrapper">
+<!-- top area start -->
+
+<div class="page_wrapper">
+    <!-- top area start -->
+    <div class="main_wrapper">
+	<div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+        <div class="main">
+            <div class="top-grid">
+                 <div class="page_headings">Expenses Details &nbsp;&nbsp;&nbsp;<img id="initexpenseflag" class="flag_inner_"/></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+       </div>
+<div class="main" >
+
+
+
+<div class="mid_area-all" id="container" >
+
+ </div>
+
+
+    <div class="v_travel_main">
+         <a id="btnadd" class="cs_btn" data-role="button" data-click="btnaddexpense" style="float:right;margin-top:-3%;background:none;border:0px">
+            <img src="images/add_expense_btn.png" /></a>
+        <div class="v_trv_" style="margin-top:-1px;">
+
+            <table id="v_travel_" class="travelofexpense">
+
+
+
+
+
+            </table>
+            <script id="travelview" type="application/template-html">
+					             <tbody>
+                                <tr>
+					            <td>Name:</td>
+					            <td>{{Name}}</td>
+					        </tr>
+					        <tr>
+					            <td>To Date:</td>
+					            <td>{{todate}}</td>
+					        </tr>
+					        <tr>
+					        <td>From Date:</td>
+					        <td>{{datefrom}}</td>
+					        <tr>
+					        <tr>
+					            <td>Amount:</td>
+					            <td>{{amount}}</td>
+					        </tr>
+					        <tr>
+					            <td>description:</td>
+					            <td>{{descr}} </td>
+					        </tr>
+                     </tbody>
+					        </script>
+        </div><!--/-->
+
+    </div><!--view travel mian-->
+    <div id="expensescontainer" >
+
+    </div>
+    <script id="expense" type="=application/template-html">
+            <div class="exp_type_">
+           <div class="v_travel_main">
+               <div class="v_trv_">
+                   <table id="v_travel_">
+                       <tbody>
+                           <tr>
+                               <td>Expenses Type: </td>
+                               <td>{{expensetype}}</td>
+                           </tr>
+                           <tr>
+                               <td>Date:</td>
+                               <td>{{date}}</td>
+                           </tr>
+
+                           <tr>
+                               <td>Amount:</td>
+                               <td>{{amount}}</td>
+                           </tr>
+                           <tr>
+                               <td>Currency:</td>
+                               <td>{{currency}}</td>
+                           </tr>
+                       </tbody>
+
+                   </table>
+
+               </div><!--/-->
+
+           </div><!--view travel mian-->
+       </div><!-- exp type main-->
+       <div class="clear_"></div>
+       <div class="exxp_btn">
+        <a href="#Editmyexpense-layout?ID={{edit}}&TID={{TID}}" style="float:left; margin-left:17%; width:30%"  class="exp_type_btn">Edit Expenses</a><span class="ViewImage"  style="{{display}}" data-src="{{src}}"  ><a style="float:right; margin-right:16%; width:30%"  data-id="{{view}}"class="exp_type_btn">View image</a></span></div>
+
+        </script>
+    <div class="clear_" style="margin-bottom:8%"></div>
+    </div>
+    <!--<input name="input" type="text" class="inputbox" id="txtname" value="{{Name}}" style="outline:none" />-->
+    </div>
+
+
+
+
+<div class="mid_area-all" id="expensescontainer">
+
+ </div>
+
+ </div>
+
+    <script id="viewexpensebydateli" type="application/template-html">
+		 <li><a  href="#ViewExpensesOFTravel-layout?EID={{Eid}}"> <img src="images/expenseupload.png"/><p>{{Date}}</p><div style="clear: both"></div></a></li>
+        </script>
+
+<!--        <script id="travelAccordain" type="application/template-html">
+               <div data-role="collapsible"><h3>{{TravelName}}</h3><p><table></script>-->
+
+    </div>
+  <!--End view  my Expense by date-->
+
+ <!--  View Expenses of Travel-->
+
+    <div data-role="view" id="ViewExpensesOFTravel-layout" data-title="EXPENSES OF TRAVEL" data-layout="Home-layout" data-after-show="getExpensesofTravelInit" data-transition="overlay:slide" data-persist="true">
+
+
+
+          <script id="expenserow" type="application/template-html">
+		  <table border="3" id="t01"  width="100%" align="center" cellspacing="5" cellpadding="3">
+
+<tr><td align="center" colspan="2">MY Expenses</td></tr>
+
+<tr><td align="center"><b>Description</b></td><td align="center">Orange juice<br>Toast<br>Black coffee</td></tr>
+
+<tr><td align="center"><b>Amount</b></td><td align="center">Tuna sandwich<br>Apple</td></tr>
+
+<tr><td align="center"><b>Amount to reimburse</b></td><td align="center">Hamburger steak<br>Mashed potatoes<br>Green beans<br>Jello</td></tr>
+
+<tr><td align="center"><b>CurencyType</b></td><td align="center">Orange juice<br>Toast<br>Black coffee</td></tr>
+
+<tr><td align="center"><b>Expense Type</b></td><td align="center">Tuna sandwich<br>Apple</td></tr>
+
+<tr><td align="center"><b>Date</b></td><td align="center">Hamburger steak<br>Mashed potatoes<br>Green beans<br>Jello</td></tr>
+
+<tr><td align="center"><b>ExpenseImage</b></td><td align="center">Hamburger steak<br>Mashed potatoes<br>Green beans<br>Jello</td></tr>
+
+<div class="buttons">
+<div class="more"><a href="#">Edit</a></div>
+<div class="more"><a href="#">Delete</a></div>
+</div>
+</table>
+ </script>
+
+	</div>
+
+ <!--END View Expenses of Travel-->
+        <!--edit Expense-->
+
+    <div data-role="view" id="Editmyexpense-layout" data-title="EDIT EXPENSE" data-scroller='{"elastic": false}' data-show="EditExpensePageLoad" data-after-show="EditExpensePageshow" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+
+
+
+            <center>
+                <div class="page_wrapper">
+                    <!-- top area start -->
+                    <div class="main_wrapper">
+					<div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+                        <div class="main">
+                            <div class="top-grid">
+
+                              <div class="page_headings">Edit Expenses  &nbsp;&nbsp;&nbsp;<img id="editexpenseflag" class="flag_inner_"/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="body_wrapper">
+
+
+    </div>
+   <div class="DetailForm">
+                    <form id="form1">
+                        <table class="Container" border="0">
+
+                              <tr>
+                                 <td>
+                                   <select id="ddlTravel" class="textarea"></select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                               <td>
+                                    <select id="ddlExpense" class="textarea">
+                                        <option style="width:91%" value="">Select Expense Type</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                               <td><input style="width:91%;" type="date" id="txtdate"  onClick="$(this).removeClass('placeholderclass')" class="date dateclass"  placeholder="Date"   /></td>
+                            </tr>
+
+                            <tr id="Tr1">
+                                <td><input type="text" id="txtDesc" placeholder="Description" class="textbox" /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  <input  type="number" id="txtamount" value="20" placeholder="Amount" class="textbox" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <select id="ddlCur" style="width:91%;" class="textarea">
+                                    <!--<option value="">Select Currency</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="(100)JPY">JPY</option>
+                                    <option value="CNY (*)">CNY</option>
+                                    <option value="BHD">BHD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="SEK">SEK</option>
+                                    <option value="CAD">CAD</option>
+                                    <option value="KRW">KRW</option>
+                                    <option value="MXN">MXN</option>
+                                    <option value="SGD">SGD</option>
+                                    <option value="AED">AED</option>
+                                    <option value="BRL">BRL</option>
+                                    <option value="ARS">ARS</option>-->
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+								<td>
+									<a id="Uploadpp" data-click="ChoosePhotoEdit" data-role="button" style="float:left;background:none;border:0px" class="cs_btn">
+										<img src="images/icons/upload-file_btn.png">
+									</a>
+									<a data-role="button" data-click="CapturePhotoEdit" style="float:right;background:none;border:0px" class="cs_btn">
+										<img src="images/icons/upload_picture_btn.png">
+									</a>
+								    <img id="Img" src="" style="display:none;" />
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                   <div class="edit_exp_btn">
+									<a id="btn-update" data-click="UpdateExpense" data-role="button" class="custom_btn_" style="float:left">update</a>
+                                    <a id="btn-cancel" data-role="button" class="custom_btn_" style="float:right">Cancel</a>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </div>
+        <!--   <form>
+        <ul data-role="listview" data-style="insert">
+            <li>
+
+                <label  style="width:60%;">Travel Name                </label>
+                  <select id="ddlTravel" ></select>
+            </li>
+            <li>
+                <label  style="width:100%;">Expense Type:</label>
+
+                    <select id="ddlExpense">
+                       <option style="width:60%;" value="">Select Expense Type</option>
+                    </select>
+                            </li>
+            <li id="EditDescription">
+                <label  style="width:100%;">
+                    Description:</label>
+                <br />
+                    <textarea id="txtDesc" style="resize: none;float:left" ></textarea>
+
+            </li>
+            <li>
+                <label  style="width:100%; text-align:left;">
+                    Date: </label>
+                <br />
+                    <input style="width:90%;" type="date" id="txtdate" value="yyyy-mm-dd" />
+
+            </li>
+             <!--<li>
+                <label>Upload File
+                    <a class="Customebutton button dh" id="A1">Upload</a>
+                   <button class="Customebutton" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Choose File</button>
+                </label>
+            </li>-->
+          <!--  <li>
+                <label  style="width:100%;">Amount:</label>
+                <br />
+                    <input style="width:90%;" type="number" id="txtamount" value="20" />
+                            </li>
+                <li>
+                    <label  style="width:100%; text-align:left;">Currency:</label>
+                    <br />
+                    <select id="ddlCur" style="width:90%;">
+                                    <option value="">Select Currency</option>
+                                    <option value="USD" SELECTED="YES">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="CHF">CHF</option>
+                                    <option value="(100)JPY">JPY</option>
+                                    <option value="CNY (*)">CNY</option>
+                                    <option value="BHD">BHD</option>
+                                    <option value="RUB">RUB</option>
+                                    <option value="DKK">DKK</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="SEK">SEK</option>
+                                    <option value="HKD">HKD</option>
+                                    <option value="KRW">KRW</option>
+                                    <option value="MXN">MXN</option>
+                                    <option value="SGD">SGD</option>
+                                    <option value="AED">AED</option>
+                                    <option value="BRL">BRL</option>
+                                    <option value="ARS">ARS</option>
+                    </select>
+
+            </li>
+              <li>
+          <label>Upload File:
+
+               <a  data-click="ChoosePhotoEdit" data-role="button" style=" text-align: center; width:84%;">Choose File</a>
+              <a  data-click="CapturePhotoEdit" data-role="button" style=" text-align: center; width:84%;">Capture Photo</a>
+                <img id="Img" src=""  style="display:none;">
+                  </label>
+        </li>
+
+            <li>
+                <label>
+                    <a id="btn-update" data-click="UpdateExpense" data-role="button" style=" margin: 2em; text-align: center;">update</a>
+                     <a id="btn-cancel" data-role="button" style="margin-left: 13%;" >Cancel</a>
+                </label>
+            </li>
+        </ul>
+    </form>-->
+                </center>
+        <script id="ETravel" type="application/template-html">
+            <option value="{{id}}">{{Name}}</option>
+        </script>
+          <script id="Expenses" type="application/template-html">
+            <option data-commentRequired="{{CommentRequired}}" value="{{id}}">{{Name}}</option>
+        </script>
+    </div>
+
+<!--End UploadExpense-->
+
+        <!-- my Submission -->
+          <div data-role="view" id="mySubmission-layout" data-scroller='{"elastic": false}' data-title="MY SUBMISSION TRAVELS" data-show="initMySubmission" data-layout="Home-layout" data-transition="overlay:slide" data-persist="true">
+              <div class="page_wrapper">
+                  <!-- top area start -->
+                  <div class="page_wrapper">
+                      <!-- top area start -->
+                      <div class="main_wrapper">
+					  <div class="inner-banners"><img src="images/inner_page_banner.png"/></div>
+                          <div class="main">
+                              <div class="top-grid">
+                                   <div class="page_headings">TRAVEL STATUS &nbsp;&nbsp;&nbsp;<img id="initmysubmission" class="flag_inner_"/></div>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                 <div class="clear"></div>
+					<div class="travel_status_main">
+						<div class="trv_status_">
+							<table id="travel_status_">
+									<thead>
+										<tr>
+											<th>Travel Name</th>
+											<th>Submit Date</th>
+											<th>Status</th>
+											<th>Reimbursable Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+
+									<!--	<tr>
+											<td>London</td>
+											<td>16-07-2015</td>
+											<td class="t_status s_rejected">Rejected</td>
+											<td>5800</td>
+										</tr>
+										<tr>
+											<td>Haroon</td>
+											<td>15-07-2015</td>
+											<td class="t_status s_pending">Pending</td>
+											<td>5800</td>
+										</tr>
+										<tr>
+											<td>Haroon</td>
+											<td>15-07-2015</td>
+											<td class="t_status s_approved">Approved</td>
+											<td>5800</td>
+										</tr>-->
+									</tbody>
+							</table>
+						</div>
+					</div><!--travel main status-->
+
+                  <!--<table id="t02" border="0" align="center">
+                      <thead>
+                          <tr>
+                              <th>Travel Name</th>
+                              <th>Submit Date</th>
+                              <th>Status</th>
+                              <th>Amount To Reimburse</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+
+                      </tbody>
+                  </table>-->
+              </div>
+
+ <!-- <ul data-role="listview" class="MainMenu2"  id="SubmissionUl">
+
+         </ul>-->
+		<script id="submissionLi" type="application/template-html">
+         	<tbody>
+            <tr><td>{{TravelName}}</td> <td>{{submiteddate}}</td><td>{{Status}}</td><td>{{AmountToReimburse}}</td>	<tbody>
+            <td><a  href="#SubmissionExpensesOFTravel-layout?TID={{Tid}}&comments={{comment}}">View</a></td></tr>
+	<!--	  <li><a  href="#SubmissionExpensesOFTravel-layout?TID={{Tid}}&comments={{comment}}"><img src="images/expenseupload.png"/><p>{{TravelName}}</p><p>{{submiteddate}}</p><p>{{Status}}</p> <div style="clear: both"></div></a></li>-->
+        </script>
+
+
+       <!-- <script id="rowrepeation" type="application/template-html">
+            <tr>
+					<td>{{Description}}</td><td>{{amount}}</td><td>{{AmounttoReimburse}}</td><td>{{CurencyType}}</td><td>{{ExpensType}}</td><td>{{Date}}</td><td> <a class="viewimage" data-src="{{Imagesrc}}" ></a></td>
+				</tr>
+
+        </script>-->
+       <!-- <script id="final" type="application/template-html">
+
+            	</tbody></table></p>
+    </div>
+
+        </script>-->
+
+	</div>
+
+        <!-- End my submission -->
+
+<!--<!-- submission expesess by Travel -->
+            <div data-role="view" id="SubmissionExpensesOFTravel-layout" data-title="EXPENSES OF TRAVEL" data-layout="Home-layout" data-after-show="SubmissionExpensesofTravelInit" data-transition="overlay:slide" data-persist="true">
+                <div class="page_wrapper">
+                    <!-- top area start -->
+                    <div class="page_wrapper" style="margin-top:10px;">
+                        <!-- top area start -->
+                        <div class="main_wrapper">
+                            <div class="main">
+                                <div class="top-grid">
+
+                                    <div class="logo2"><img src="images/mainlogo.png" width="300" height="40" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="body_wrapper">
+
+                    <h1>Expenses View</h1>
+
+                </div>
+                <div class="main" >
+                    <div class="mid_area-all" id="container122" >
+
+                    </div>
+
+                    <script id="submittravelview" type="application/template-html">
+
+
+
+
+                        <div class="form_wrap2">
+
+                        <div class="form3">
+
+                        <div class="grid-2">
+
+                        <div class="bold">Name:
+                        <label id="txtname">{{Name}} </label>
+                        </div>
+
+                        <!--<input name="input" type="text" class="inputbox" id="txtname" value="{{Name}}" style="outline:none" />-->
+                        </div>
+
+                        <div class="grid-2">
+                        <div class="bold">To Date:
+                        <label id="txttodate">{{todate}} </label>
+                        </div>
+
+                        </div>
+
+
+                        <div class="grid-2">
+                        <div class="bold">From Date:
+                        <label id="txtfromdate">{{datefrom}} </label>
+                        </div>
+
+                        </div>
+
+                        <div class="grid-2">
+                        <div class="bold">Amount:
+                        <label id="txtexamount">{{amount}} </label>
+                        </div>
+
+                        </div>
+
+                        <div class="grid-2">
+                        <div class="bold">Description:
+                        <label id="txtdesc">{{descr}} </label>
+                        </div>
+                        </div>
+
+
+                        </div>
+                        </script>
+
+
+                    <div class="mid_area-all" id="Submitexpensescontainer">
+
+                    </div>
+                     <script id="Submitedexpense" type="application/template-html">
+
+                            <div class="form_wrap">
+                            <div class="form1">
+
+                            <div class="grid-1">
+
+                            <p>Expenses Type:</p>
+                            <label id="txtexpensetype">{{ExpensType}} </label>
+                            </div>
+                            <div class="grid-1">
+
+                            <p>Description:</p>
+                            <label id="txtexpensetype">{{Description}} </label>
+                            </div>
+                            <div class="grid-1">
+                            <p>Date:</p>
+                            <label id="txtdat">{{Date}} </label>
+
+                            </div>
+
+
+
+                            <div class="grid-1">
+                            <p>Amount:</p>
+                            <label id="txtamo">{{amount}} </label>
+
+                           <!-- </div>
+                            <div class="grid-1">
+                            <p>Amount to reimburse:</p>
+                            <label id="txtamo">{{AmounttoReimburse}} </label>
+
+                            </div>-->
+                            <div class="grid-1">
+                            <p>Currency:</p>
+                            <label id="txtcurrency">{{CurencyType}} </label>
+                            </div>
+
+                            </div>
+                            <div class="buttons">
+                            <div class="read_more ViewImage" style="{{display}}" data-src="{{src}}"  ><a  data-id="{{view}}"  >View</a></div>
+
+                            </div>
+                            </div>
+                            </script>
+                </div>
+
+    </div>
+            <script id="viewexpensebydate" type="application/template-html">
+                <li><a  href="#ViewExpensesOFTravel-layout?EID={{Eid}}"> <img src="images/expenseupload.png"/><p>{{Date}}</p><div style="clear: both"></div></a></li>
+                </script>
+
+            <!--        <script id="travelAccordain" type="application/template-html">
+             <div data-role="collapsible"><h3>{{TravelName}}</h3><p><table></script>-->
+
+            </div>
+  <!--End view in Submission  my Expense by date-->
+
+
+
+
+<div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="Business Title" class="appbg" >
+
+
+        <div class="LoginContainer" id="wraper">
+
+
+            <div class="logo">
+                <img src="img/bg-logo1.jpg" style="width:100%; height:100px;"/>
+            </div>
+
+            <table class="Container" border="0" align="center">
+                <tr>
+                    <td> <div class="messages k-error-colored">
+        <span data-for="txtEmail" class="k-invalid-msg"></span>
+				<span data-for="txtPassword" class="k-invalid-msg"></span>
+      </div> </td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="username" id="txtEmail" /></td>
+                </tr>
+                <tr>
+                    <td><input type="password" placeholder="password" id="txtPassword" /></td>
+                </tr>
+                <tr>
+
+                    <td><input type="button" value="LOGIN" id="btn-login-click"/></td>
+                </tr>
+
+
+
+
+            </table>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+ <script src="js/jquery.panzoom.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function () {
+
+              $("#viewExpensesOfTravelByDate").on("click", ".ViewImage", function() {
+                  var src = $(this).data("src");
+
+                  $("#ImagePopUp img").attr("src", src);
+                  $("#ImagePopUp").fadeIn(500);
+                  $(".panzoom-elements").panzoom();
+              });
+              $("#ImagePopUp").on("click", "#Close", function (e) {
+                  $("#ImagePopUp").fadeOut(500);
+              });
+              $("#SubmissionExpensesOFTravel-layout").on("click", ".ViewImage", function() {
+                  var src = $(this).data("src");
+
+                  $("#ImagePopUp img").attr("src", src);
+                  $("#ImagePopUp").fadeIn(500);
+               $(".panzoom-elements").panzoom();
+              });
+              $(document.body).on("click", "#btn-logout", function (e) {
+                  window.localStorage.clear();
+                  $("#EmailAddress").val("");
+                  $("#Password").val("");
+                  window.location = "#Login-home";
+
+
+              });
+              $(document.body).on("click", ".Selectcountry", function() {
+                  var countryid = $(this).data("id");
+                  localStorage.setItem("CountryId", countryid);
+                  var flag = $(this).attr("src");
+                  var userid = localStorage.getItem("UserId");
+               //   updatecountry(userid, countryid);
+                  localStorage.setItem("flag", flag);
+                  window.location="#homelandingpage";
+              });
+              $(document.body).on("click", ".logout", function () {
+                  var countryid= localStorage.getItem("CountryId");
+                  var  flag=localStorage.getItem("flag");
+                  localStorage.clear();
+                  localStorage.setItem("CountryId", countryid);
+                  $("#EmailAddress").val("");
+                  $("#Password").val("");
+                  window.location = "#Login-home";
+
+              });
+              //$(document.body).on("click", "div[data-role=tabstrip] a", function () {
+              //    var id = $(this).data("href");
+
+              //    if()
+
+              //});
+              //  FOR DESCRIPTION SHOW
+              //$("#ddlExpenseType").change(function () {
+              //  //  alert("in change")
+              //    var commentRequired = $("#ddlExpenseType option:selected").attr("data-commentrequired");
+              // //s   alert(commentRequired);
+              //    if (commentRequired == "true") {
+              //        $("#discriptionRequired").removeAttr("style")
+              //    }
+              //    else {
+              //       // alert("hide");
+              //        $("#discriptionRequired").css("display", "none");
+              //    }
+
+              //});
+              //$("#ddlExpense").change(function () {
+              //    //  alert("in change")
+              //    var commentRequired = $("#ddlExpense option:selected").attr("data-commentrequired");
+              //    //s   alert(commentRequired);
+              //    if (commentRequired == "true") {
+              //        $("#EditDescription").removeAttr("style")
+              //    }
+              //    else {
+              //        // alert("hide");
+              //        $("#EditDescription").css("display", "none");
+              //    }
+
+              //});
+
+              //  FOR DESCRIPTION SHOW END
+              //$("input[type='date']").each(function () {
+              //    var picker = $(this);
+              //    console.log($(this));
+              //    console.log("--------------------------------------------------------------");
+              //    picker.mobipick({
+              //        dateFormat: "MM-dd-yyyy"
+              //    });
+
+              //});
+              //console.log(picker);
+
+              //picker.mobipick({
+              //    dateFormat: "MM-dd-yyyy"
+              //});
+              //picker.on("change", function () {
+              //    // formatted date, like yyyy-mm-dd
+              //    var date = $(this).val();
+
+              //    // JavaScript Date object
+              //    var dateObject = $(this).mobipick("option", "date");
+              //});
+
+              //  EditDescription      alert("in click");
+              //$("#txtEmail").val(localStorage.getItem("e"));
+              //$("#txtPassword").val(localStorage.getItem("p"));
+              //$(".LoginContainer").on("click", "#btn-login-click", function () {
+              //                 //       alert("click");
+
+
+              //                        });
+          });
+          var kendoMobileApp = new kendo.mobile.Application(document.body);
+
+      </script>
+<!--    <script type="text/javascript">-->
+<!--        var kendoMobileApp = new kendo.mobile.Application(document.body);-->
+<!--        -->
+<!--        $(document).ready(function () {-->
+<!--                          -->
+<!--                          -->
+<!--                          $("#txtEmail").val(localStorage.getItem("e"));-->
+<!--                          $("#txtPassword").val(localStorage.getItem("p"));-->
+<!--                          $(".LoginContainer").on("click", "#btnlogin", function () {-->
+<!--                                                  alert("click");-->
+<!--                                                  var email = $("#txtEmail").val();-->
+<!--                                                  var password = $("#txtPassword").val();-->
+<!--                                                  -->
+<!--                                                  localStorage.setItem("e", email);-->
+<!--                                                  localStorage.setItem("p", password);-->
+<!--                                                  getuser(email, password)-->
+<!--                                                  // kendoMobileApp.navigate("users/Expense.html");-->
+<!--                                                  //kendoMobileApp.navigate("users/Expense.html");-->
+<!--                                                  window.location.href="users/Expense.html";-->
+<!--                                                  -->
+<!--                                                  });-->
+<!--                          -->
+<!--                          });-->
+<!--                          -->
+<!--                          -->
+<!--        </script>-->
+         </div>
+<div data-role="view" id="viewmyAction-layout" data-title="Processing Your Request" data-layout="Home-layout"  data-show="viewActionShow" data-transition="overlay:slide" data-persist="true">
+
+    <!-- <div style="clear: both;">
+     <button class="Customebutton" id="gotouploadMedia">Upload Media</button>
+     </div>-->
+
+    <!--            <div id="MediaLibraryLoader">
+     <img src="images/loader.GIF">
+     </div>-->
+
+    <!-- <img src="" id="dwnldImg" style="display: none;">-->
+
+    <div class="page_wrapper">
+        <div class="page_wrapper" style="margin-top:10px;">
+            <!-- top area start -->
+            <div class="main_wrapper">
+                <div class="main">
+                    <div class="top-grid">
+                        <div class="logo2"><img src="images/mainlogo.png" width="300" height="40" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body_wrapper">
+            <h1>View Travel</h1>
+        </div>
+
+    </div>
+</div>
+             <!--Popup-->
+<div id="ImagePopUp">
+
+ <button id="Close">Close
+ </button>
+
+
+<div class="panzoom-elements">
+       <img id="DisplayImage" />
+      </div>
+
+</div>
+<!--Popup-->
+    </body>
+</html>

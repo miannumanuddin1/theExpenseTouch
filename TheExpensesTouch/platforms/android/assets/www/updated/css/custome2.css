@@ -1,0 +1,797 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*body {
+ margin:auto;
+ width:100%;
+ text-align:center;
+ background:#000;
+ position: relative;
+
+
+}*/
+div[data-role=view] .km-content
+{
+	background:url(../images/bg.jpg) !important;
+	background-size:100% 100%;
+	text-align:center;
+	outline-color:none;
+}
+.buttons {  width:100%;  margin:0 auto;  }
+
+.more { float:left; width:99px; height:39px; margin-top:15px; margin-left:130px; background:#FFFFFF;
+padding:3px; 
+color:#f57a20; 
+-moz-box-shadow: 0px 2px 5px #888;
+-webkit-box-shadow: 0px 2px 5px #888;
+box-shadow: 0px 2px 5px #888;
+position:relative; }
+.more a{float:left; color:#fff; width:99px; height:29px; background:#107dd7; text-align:center; 
+font-size:15px; letter-spacing:-1px; word-spacing:-1px; padding:10px 0 0 0; text-decoration:none; }
+.more a:hover{background:url(../images/read_more_hover.jpg) repeat-x; color:#fff; text-decoration:none; }
+
+
+
+
+.LoginFrieldsContainer
+{
+	margin:30px 0px 0px 0px;
+	padding:0px;
+	display:block;
+	clear:both;	
+}
+
+.LoginFrieldsContainer input[type=text],
+.LoginFrieldsContainer input[type=password]
+{
+	margin:10px 0px 0px 0px;
+	padding:10px 10px 10px 10px;
+	width:90%;
+	clear:both;
+	color:#333;
+	font-size:16px;
+	font-weight:500;
+	border:none;
+	border:1px solid #CCC;
+	overflow:hidden;
+	border-radius:5px;
+}
+
+.LoginFrieldsContainer button
+{
+	margin:10px 0px 0px 0px;
+	padding:10px 10px 10px 10px;
+	width:90%;
+	clear:both;
+	color:#fff;
+	font-size:16px;
+	font-weight:500;
+	border:none;
+	overflow:hidden;
+	border-radius:5px;
+	background:#0090ff;
+}
+
+.LoginFrieldsContainer #Loader
+{
+	margin:10px 0px 20px 0px;
+	display:block;
+}
+
+#Login-home .Error
+{
+	margin:0px;
+	padding:8px;
+	font-size:16px;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	background:#900;
+	font-weight:500;
+	text-align:center;
+	display:none;
+}
+
+
+.km-ios .km-view-title
+{
+	background: #24bcf5;
+	border: none;
+	height: 50px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow:none;
+}
+
+span[data-role=view-title]
+{
+	font-weight:500;	
+	position:relative;
+	top:4px;
+}
+
+
+.km-ios li.km-state-active .km-listview-link
+{background: #24bcf5;}
+
+.km-ios li.km-state-active .km-listview-link p{color:#FFF;}
+/*Main Menu Page Css*/
+
+#Home-layout .MainMenu
+{
+	margin:0px;	
+}
+
+
+#Home-layout .MainMenu li
+{
+	border-bottom:1px solid #dddddd;
+	background:#0090ff;
+	display:list-item; 
+	color:#fff; 
+}
+
+#Home-layout .MainMenu li img{float:left; margin-top:8px; width:40px; background-color:#fff; border-radius:1px;}
+#Home-layout .MainMenu li p
+{
+	float:left;
+	font-weight:500;
+	font-size:16px;
+    
+}
+
+.MainMenu2
+{
+    margin:0px;
+    width:100%;
+    float:left;
+}
+
+
+.MainMenu2 li
+{
+    font-size:14px;
+    text-align:left;
+    float:left;
+}
+
+.MainMenu2 li img{float:left; margin-top:8px; width:40px; background-color:#fff; border-radius:1px;}
+.MainMenu2 li p
+{
+    font-size:14px;
+    text-align:left;
+    float:left;
+    
+}
+
+.ActivityLog
+{
+	margin:0px 0px 0px 0px;
+	width:100%;
+	font-size:16px;
+	display:none;	
+}
+
+.ActivityLog tr
+{
+	background:inherit;	
+}
+
+.ActivityLog tr td
+{
+	padding:10px 10px 10px 10px;
+	border-bottom:1px solid #cecccd;	
+}
+
+.ActivityLog tr td:nth-child(1) span{color:#1e99c7;}
+
+.ActivityLog tr td:nth-child(2)
+{
+	width:30%;
+	border-left:1px solid #cecccd;
+}
+
+.MenuBtn
+{
+	background-image: url(../images/MenuICO.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-left:-6px;
+	margin-top:-4px;
+	padding:14px 15px 17px 13px;
+	height:20px;
+	width:20px;
+	background-size:35px 31px;
+}
+
+.MenuBtn:hover{background:url(../images/MenuICO-hovr.png) center no-repeat;}
+
+#LogLoader, #MediaLibraryLoader
+{
+	margin:40px 0px 20px 0px;
+	display:block;
+	clear:both;
+}
+
+.MediaLibraryContainer
+{
+	margin:0px auto;
+	width:100%;
+}
+
+.MediaLibraryContainer tr td:nth-child(1){width:100%; vertical-align:middle;}
+
+.MediaLibraryContainer tr td:nth-child(2) select
+{
+	margin:4px 0px 4px 0px; 
+	padding:3px 0px 5px 5px;
+	border:none;
+	width: 100%;
+	font-size:14px;
+	border: 2px solid #8b8b8b;
+	outline: none;
+	border-radius: 5px;
+	background: transparent;
+	background: url(../images/Dropdown_Arrow.png) right top no-repeat;
+	height: auto;
+	clear: both;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	appearance: none;
+	text-indent: 0.1px;
+	text-overflow: '';
+
+}
+
+
+.MediaLibraryContainer tr td:nth-child(1) img{width:100%;}
+.MediaLibraryContainer tr td{border-bottom:0px solid #CCC; padding-bottom:10px; width:100%;}
+.MediaLibraryContainer tr td:nth-child(2){padding:5px; color:#333; font-size:12px; word-break:break-all;}
+
+
+table {
+    width:100%;
+}
+table, th, td {
+    border: 0px solid #e3e2e2;
+    border-collapse: collapse;
+    font-size:14px;
+}
+th, td {
+    
+    text-align:center;
+    font-size:16px;
+    height:3em;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+    height:3em;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+   height:3em;
+}
+table#t01 th	{
+    background-color:#0090ff;
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+    height:3em;
+}
+
+table#t02 tr:nth-child(even) {
+    background-color: #eee;
+    height:3em;
+}
+table#t02 tr:nth-child(odd) {
+   background-color:#fff;
+   height:3em;
+}
+table#t02 th	{
+    background-color:#0090ff;
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+    height:3em;
+}
+
+.ShareEmail
+{
+	margin:0 auto;	
+}
+
+.ShareEmail input[type=text]
+{
+    margin:20px 0px 20px 0px;
+    padding:10px 10px 10px 10px;
+    font-weight:normal;
+    color:#333;
+    border:none;
+    display:block;
+    clear:both;
+    width:50%;
+    font-size:12px;
+    
+}
+
+
+.ShareEmail button
+{
+	margin:10px 0px 0px 0px;
+	padding:10px 10px 10px 10px;
+	width:90%;
+	clear:both;
+	color:#fff;
+	font-size:16px;
+	font-weight:500;
+	border:none;
+	overflow:hidden;
+	border-radius:5px;
+	background:#0090ff;	
+}
+
+.ShareEmail #MsgProcessing
+{
+	margin:20px 0px 0px 0px;
+	clear:both;
+	display:none;
+
+}
+
+.ShareEmail p
+{
+	color:#333;
+}
+
+
+.AccountSetting
+{
+	margin:0 auto;
+	display:none;
+}
+
+.AccountSetting .Heading
+{
+	margin:15px 10px 15px 10px;
+	display:block;
+	clear:both;
+	text-align:left;
+	font-weight:500;
+	font-size:18px;	
+}
+
+.AccountSetting .AccountOptions
+{
+	margin:15px 0px 15px 0px;
+	display:block;
+	clear:both;
+	text-align:left;
+	font-weight:500;
+	color:#333;
+	background:#FFF;
+	border:1px solid #ccc;
+}
+
+.AccountSetting .AccountOptions li
+{
+	background:#FFF;
+	border-bottom:1px solid #ccc;	
+}
+
+.AccountSetting .AccountOptions li h2
+{
+	margin:5px 0px 0px 10px;
+	font-weight:500;
+	font-size:18px;	
+}
+
+
+.AccountSetting .AccountOptions li p
+{
+	margin:2px 0px 0px 10px;
+	font-weight:500;
+	color:#666;
+}
+
+
+.AccountSetting .accountdetail
+{
+	margin:10px 0px 0px 0px;
+	padding:10px 5px 10px 5px;;
+	background:#FFF;
+	display:block;
+	clear:both;
+	border:1px solid #CCC;
+}
+
+.AccountSetting .accountdetail p
+{
+	margin:10px;
+	font-size:14px;
+	font-weight:500;
+}
+
+.AccountSetting .accountdetail button
+{
+	margin:10px 0px 10px 0px;
+	padding:10px 10px 10px 10px;
+	width:90%;
+	clear:both;
+	color:#fff;
+	font-size:16px;
+	font-weight:500;
+	border:none;
+	overflow:hidden;
+	border-radius:5px;
+	background:#21b8ef;
+}
+
+
+.buttonCustome
+{
+	margin:10px 0px 10px 0px;
+	padding:10px 10px 10px 10px;
+	width:70%;
+	clear:both;
+	color:#fff;
+	font-size:16px;
+	font-weight:500;
+	border:none;
+	overflow:hidden;
+	border-radius:5px;
+	background:#21b8ef;
+}
+
+#AccountPageMsgToDisplay
+{
+	margin:20px 0px 10px 0px;
+	font-weight:500;	
+}
+
+
+.commonwaitingmsg
+{
+	margin:20px 0px 10px 0px;
+	font-weight:500;
+	display:none;	
+}
+
+.ChangeAccountDetail
+{
+	margin:20px 0px 10px 0px;
+	padding:0px 0px 0px 0px;
+	
+}
+
+.ChangeAccountDetail label
+{
+	margin:10px 0px 2px 0px;
+	padding:0px 0px 0px 0px;
+	font-weight:500;
+	clear:both;
+	text-align:left;
+	font-size:14px;
+	width:90%;
+	display:block;
+}
+
+.ChangeAccountDetail input[type=text],
+.ChangeAccountDetail input[type=password]
+{
+	margin:3px 0px 3px 0px;
+	padding:10px 0px 10px 10px;
+	font-size:14px;
+	border:1px solid #CCC;
+	clear:both;
+	width:90%;
+	font-weight:500;
+}
+
+.paymentscontainer
+{
+	margin:0px 0px 0px 0px;
+	padding-bottom:20px;
+	height:auto;
+	background:#FFF;
+	border:1px solid #ccc;	
+}
+
+.paymentscontainer img
+{
+	margin:20px 0px 0px 0px;
+	width:150px;
+}
+
+.paymentscontainer p
+{
+	margin:0px 0px 20px 0px;
+	padding:0px 10px 0px 10px;
+	font-weight:500;
+	font-size:16px;
+}
+
+.paymentscontainer h2
+{
+	margin:20px 0px 10px 0px;
+	font-weight:500;
+	font-size:18px;
+}
+
+.paymentscontainer h3
+{
+	margin:10px 0px 0px 0px;
+	font-weight:500;
+	font-size:18px;
+}
+
+
+#paywithPaypalcontainer
+{
+	margin:0px 0px 0px 0px;
+	padding:10px 0px 15px 0px;
+	width:90%;
+	border:1px solid #CCC;
+	display:none;	
+}
+
+
+#paywithPaypalcontainer h2
+{
+	margin:10px 0px 10px 0px;
+	font-weight:500;
+	font-size:18px;
+}
+
+#paywithPaypalcontainer select
+{
+	margin:0px 0px 0px 0px;
+	padding:10px 0px 10px 10px;
+	font-weight:500;
+	font-size:16px;
+	border:2px solid #CCC;
+	width:90%;
+	outline: none;
+	border-radius: 5px;
+	background: transparent;
+	background: url(../images/Dropdown_Arrow.png) right center no-repeat;
+	background-size:35px 35px;
+	height: auto;
+	clear: both;
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	appearance: none;
+	text-indent: 0.1px;
+	text-overflow: '';
+}
+
+
+.MyReportsDisplay{margin:0px; display:none;}
+
+.MyReportsDisplay li{margin-top:1px;}
+.MyReportsDisplay li a
+{
+	padding:20px 10px 20px 10px !important;
+	text-align:left;
+	font-weight:normal;
+	font-size:16px;
+	border-bottom:1px solid #dddddd;
+}
+
+.MyReportsDisplay li a span,
+.MyReportsDisplay li a img
+{float:left;}
+
+.MyReportsDisplay li a img
+{
+	position:relative;
+	left:6px;
+	top:-2px;	
+}
+
+.MyReportsDisplay li:nth-child(odd){background: #f7f7f7}
+.MyReportsDisplay li:nth-child(even){background: #f0eeee}
+
+.SubMenuForReports
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	bottom:0px;
+	background:url(../images/submenuBG.png) repeat;
+	z-index:5000;
+	display:none;
+	overflow:hidden;	
+}
+
+.SubMenuForReports ul
+{
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	z-index:7000;
+	display:none;
+}
+.SubMenuForReports ul li{border-bottom:1px solid #dddddd;}
+.SubMenuForReports ul li a{color:#333;}
+.SubMenuForReports ul li .km-listview-link:after{display:none;}
+
+
+
+
+.SubMenuForForms
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	bottom:0px;
+	background:url(../images/submenuBG.png) repeat;
+	z-index:5000;
+	display:none;
+	overflow:hidden;	
+}
+
+.SubMenuForForms ul
+{
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	z-index:7000;
+	display:none;
+}
+.SubMenuForForms ul li{border-bottom:1px solid #dddddd;}
+.SubMenuForForms ul li a{color:#333;}
+.SubMenuForForms ul li .km-listview-link:after{display:none;}
+
+
+
+
+.Customebutton
+{
+	margin:10px 0px 10px  0px;
+	padding:10px 10px 10px 10px;
+	width:60%;
+	clear:both;
+	color:#fff;
+	font-size:16px;
+	font-weight:500;
+	border:none;
+	overflow:hidden;
+	float:right;
+	clear:both;
+	border-radius:5px;
+	background:#21b8ef;
+	text-align: center;
+}
+.DetailForm
+{
+    margin: 5px auto;
+    padding:0px;
+    width:90%;
+}
+
+.DetailForm .Container:first-child
+{margin-top:10px;}
+
+.DetailForm .Container
+{
+    margin-top:5px;
+    padding:0px;
+    width:100%;
+}
+
+
+.DetailForm .Container tr td:nth-child(1){width:80px;}
+.DetailForm .Container tr td{padding-top:10px;}
+
+.DetailForm .Container label
+{
+    margin:0px 5px 3px 0px;
+    display:block;
+    clear:both;
+    
+    font-size:14px;
+    text-align:left;
+}
+
+.DetailForm .Container input[type=text], .DetailForm .Container input[type=tel], .DetailForm .Container input[type=date]
+{
+    width:90%;
+    color:#333;
+    background:none;
+    border:none;
+    border-width:0px;
+    border-style:none;
+    border-color:transparent;
+    webkit-touch-callout: none;
+    -webkit-tap-highlight-color:none;
+    border-bottom:1px solid #333;
+    border-radius:2px;
+    overflow:hidden;
+    outline:none;
+    outline-offset:0px;
+    font-size:14px;
+    font-weight:normal;
+}
+
+
+.DetailForm .Container input[type=text], .DetailForm .Container input[type=tel], .DetailForm .Container input[type=txt]
+{
+    width:90%;
+    color:#333;
+    background:none;
+    border:none;
+    border-width:0px;
+    border-style:none;
+    border-color:transparent;
+    webkit-touch-callout: none;
+    -webkit-tap-highlight-color:none;
+    border-bottom:1px solid #333;
+    border-radius:2px;
+    overflow:hidden;
+    outline:none;
+    outline-offset:0px;
+    font-size:14px;
+    font-weight:normal;
+}
+
+.DetailForm .Container input[type=text], .DetailForm .Container input[type=tel], .DetailForm .Container input[type=number]
+{
+    width:90%;
+    color:#333;
+    background:none;
+    border:none;
+    border-width:0px;
+    border-style:none;
+    border-color:transparent;
+    webkit-touch-callout: none;
+    -webkit-tap-highlight-color:none;
+    border-bottom:1px solid #333;
+    border-radius:2px;
+    overflow:hidden;
+    outline:none;
+    outline-offset:0px;
+    font-size:17px;
+    font-weight:normal;
+}
+
+
+.DetailForm .Container input[type=button]
+{
+    padding:10px;
+    width:100%;
+    color:#fff;
+    background:rgb(26, 91, 152);
+    border:none;
+    border-radius:2px;
+    overflow:hidden;
+    outline:none;
+    font-size:14px;
+    font-weight:bold;
+}
+.DetailForm .Container input[type=button]
+{
+    padding:10px;
+    width:100%;
+    color:#fff;
+    background:rgb(26, 91, 152);
+    border:none;
+    border-radius:2px;
+    overflow:hidden;
+    outline:none;
+    font-size:14px;
+    font-weight:bold;
+}
